@@ -1,0 +1,46 @@
+img {
+  max-width: 30%;
+}
+
+#ProcessImages {
+  display: flex;
+  width: 80vw;
+  justify-content: center;
+  gap: 1.5em;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 1em;
+
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  line-height: 1.6;
+  background-color: #121212;
+  color: #f0f0f0;
+  padding: 0 1rem;
+}
+
+#Sources {
+  background-color: #f0f0f0;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+}
+
+#RequirementDoc {
+  text-align: left;
+  padding: 1em;
+}
+
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+h1,
+h2 {
+  color: #ffcc00;
+}

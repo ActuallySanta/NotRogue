@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jacquard+12&family=Micro+5&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="CSS/styles.css" />
+    <link rel="stylesheet" href="CSS/buttons.css" />
+    <link rel="icon" href="Assets/favicon.ico" type="image/x-icon" />
+    <title>Not-Rogue</title>
+  </head>
+  <body>
+    <div id="MainWrapper">
+      <header>
+        <h1>Not-Rogue</h1>
+        <p class="tagline">
+          A DOM-based adventure into the depths of danger and mystery. With
+          absolutely no relation to the hit game Rogue.
+        </p>
+      </header>
+      <div id="ContentArea">
+        <div id="CombatLog" class="Window">
+          <div id="TextArea" class="BodyText"></div>
+
+          <form id="PlayerTextInput">
+            <input id="ActionInput" type="text" autocomplete="off" />
+            <input
+              type="submit"
+              value="Enter Command"
+              id="PlayerActionInputSubmit"
+            />
+            <input
+              type="button"
+              value="Continue"
+              id="PlayerActionInputContinue"
+            />
+          </form>
+        </div>
+
+        <div id="Stats" class="Window">
+          <h2>Stats</h2>
+          <ul class="BodyText">
+            <li id="HealthOutput">Health:</li>
+            <li id="DamageOutput">Damage:</li>
+            <li id="DefenseOutput">Defense:</li>
+            <li id="SpeedOutput">Speed:</li>
+            <li id="WorthOutput">Worth:</li>
+            <li>
+              <p>Items:</p>
+              <ul id="ItemsOutput">
+                <li>Item:???</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div id="Actions" class="Window">
+          <h2>Actions</h2>
+          <div id="ButtonContainer">
+            <div class="ActionButton">
+              <button value="attack" class="BodyText">Attack</button>
+            </div>
+            <div class="ActionButton">
+              <button value="move" class="BodyText">Move</button>
+            </div>
+
+            <div class="ActionButton">
+              <button value="search" class="BodyText">Search</button>
+            </div>
+
+            <div class="ActionButton">
+              <button value="use" class="BodyText">Use Item</button>
+            </div>
+            <div class="ActionButton">
+              <button value="help" class="BodyText">Help</button>
+            </div>
+            <div class="ActionButton">
+              <button value="info" class="BodyText">Info</button>
+            </div>
+          </div>
+        </div>
+        <div id="MovementRose" class="Window">
+          <div class="Empty"></div>
+          <button id="Up" value="up" class="BodyText">Up</button>
+          <div class="Empty"></div>
+          <button id="Left" value="left" class="BodyText">Left</button>
+          <div class="Empty"></div>
+          <button id="right" value="right" class="BodyText">Right</button>
+          <div class="Empty"></div>
+          <button id="down" value="down" class="BodyText">Down</button>
+          <div class="Empty"></div>
+        </div>
+      </div>
+      <p class="BodyText Window" id="DocumentationLink">
+        See the documentation for this site: <a href="doc.html">here!</a>
+      </p>
+    </div>
+
+    <template id="LogEntryTemplate"
+      ><div class="LogEntry">
+        <p class="LogInfo" style="margin: 0; padding: 0"></p></div
+    ></template>
+
+    <template id="StatBlockTemplate">
+      <p class="DescStat"></p>
+      <p class="SpeedStat"></p>
+      <p class="DefenseStat"></p>
+      <p class="AttackStat"></p>
+      <p class="HealthStat"></p>
+      <p class="NameStat"></p>
+    </template>
+
+    <template id="ItemInfoTemplate">
+      <p class="DescInfo"></p>
+      <p class="WorthInfo"></p>
+      <p class="DiscoverabilityInfo"></p>
+      <p class="NameInfo"></p>
+    </template>
+
+    <template id="DeathInfoTemplate">
+      <p class="TotalAttackInfo"></p>
+      <p class="TotalWorthInfo"></p>
+      <p class="TotalSpeedInfo"></p>
+    </template>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js"
+      integrity="sha512-xi/RZRIF/S0hJ+yJJYuZ5yk6/8pCiRlEXZzoguSMl+vk2i3m6UjUO/WcZ11blRL/O+rnj94JRGwt/CHbc9+6EA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="JS/entities.js"></script>
+    <script src="JS/utilities.js"></script>
+    <script src="JS/userInput.js"></script>
+    <script src="JS/levelElements.js"></script>
+    <script src="JS/updateElements.js"></script>
+    <script src="JS/items.js"></script>
+    <script src="JS/main.js"></script>
+  </body>
+</html>
